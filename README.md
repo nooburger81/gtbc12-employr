@@ -19,6 +19,9 @@
 
   ## Usage
   To manage my employees and their standing in the company.
+  
+  Link to Video Walkthrough:
+  https://watch.screencastify.com/v/c3aXCj8iDa8BPJvB7jWu
 
   ## License
     This project is licensed under the MIT license.
