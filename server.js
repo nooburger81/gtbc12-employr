@@ -25,3 +25,54 @@ const database = mysql.createConnection(
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
+
+  mainMenu();
+
+function mainMenu() {
+    console.log("Welcome to the Employee Tracker!");
+    inquirer.prompt(
+    {
+    type: "list",
+    name: "choice",
+    message: "What would you like to do today?",
+    choices: [
+            "View All Employees", 
+            "View All Departments",
+            "View All Roles",
+            "Add Department",
+            "Add Role",
+            "Add Employee",
+            "Update Employee Role",
+            "Exit"
+            ],
+    
+}).then(answers => {
+    console.log(answers.choice);
+    switch (answers.choice) {
+        case "View All Employees":
+            viewEmployees();
+            break;
+        case "View All Departments":
+            viewDepartments();
+            break;
+        case "View All Roles":
+            viewRoles();
+            break;
+        case "Add Department":
+            addDepartment();
+            break;
+        case "Add Role":
+            addRole();
+            break;
+        case "Add Employee":
+            addEmployee();
+            break;
+        case "Update Employee Role":
+            updateEmployeeRole();
+            break;
+        default:
+            db.end();
+            break;
+    }
+})
+}
