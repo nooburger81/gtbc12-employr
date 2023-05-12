@@ -29,7 +29,9 @@ const database = mysql.createConnection(
   mainMenu();
 
 function mainMenu() {
+    console.log('**********************************');
     console.log("Welcome to the Employee Tracker!");
+    console.log('**********************************');
     inquirer.prompt(
     {
     type: "list",
